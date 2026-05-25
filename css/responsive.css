@@ -1,0 +1,131 @@
+/* ─────────────────────────────────────
+   responsive.css  –  ALTO Soluciones
+   Breakpoints: tablet (768px), mobile (480px)
+───────────────────────────────────── */
+
+/* ══ TABLET (≤ 900px) ══ */
+@media (max-width: 900px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-visual {
+    display: none;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ══ MÓVIL (≤ 768px) ══ */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--blue-dark);
+    padding: 24px;
+    gap: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .hero-logo-box {
+    display: none;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero-desc {
+    margin: 0 auto 32px;
+  }
+
+  /* Steps */
+  .steps::before {
+    display: none;
+  }
+
+  .step {
+    min-width: 140px;
+    padding: 0 8px;
+  }
+
+  /* Works split – ya es una sola columna en desktop, sin cambios extra en móvil */
+}
+
+
+/* ══ MÓVIL PEQUEÑO (≤ 480px) ══ */
+@media (max-width: 480px) {
+
+  .section {
+    padding: 60px 5%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .works-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .slider-slide {
+    flex: 0 0 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-btns {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-inner {
+    gap: 12px;
+  }
+
+  .stat {
+    padding: 8px 12px;
+    min-width: 120px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

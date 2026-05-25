@@ -1,0 +1,43 @@
+/* ─────────────────────────────────────
+   variables.css  –  ALTO Soluciones
+   Design tokens centralizados
+───────────────────────────────────── */
+
+:root {
+  /* ── Colores principales ── */
+  --blue-dark:   #042C53;
+  --blue-mid:    #0C447C;
+  --blue-main:   #185FA5;
+  --blue-light:  #378ADD;
+  --blue-pale:   #B5D4F4;
+  --blue-ghost:  #E6F1FB;
+
+  /* ── Texto ── */
+  --text:        #1a1a2e;
+  --text-muted:  #5a6a7e;
+  --white:       #ffffff;
+
+  /* ── Fondos ── */
+  --bg:          #f4f7fb;
+  --bg-white:    #ffffff;
+  --bg-ghost:    #E6F1FB;
+  --bg-dark:     linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
+
+  /* ── Bordes ── */
+  --border:      #e8eef6;
+  --radius:      14px;
+  --radius-sm:   8px;
+  --radius-lg:   20px;
+
+  /* ── Sombras ── */
+  --shadow:      0 4px 24px rgba(4, 44, 83, 0.10);
+  --shadow-lg:   0 8px 40px rgba(4, 44, 83, 0.16);
+
+  /* ── Tipografía ── */
+  --font-heading: 'Sora', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* ── Espaciado de secciones ── */
+  --section-pad: 80px 5%;
+  --max-width:   1100px;
+}
