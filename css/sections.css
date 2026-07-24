@@ -133,63 +133,80 @@
 
 /* ── PROCESO ── */
 .steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 28px 20px;
+  margin-top: 56px;
+}
+
+.step-card {
+  position: relative;
   display: flex;
-  gap: 0;
-  margin-top: 48px;
-  position: relative;
-  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.steps::before {
-  content: '';
-  position: absolute;
-  top: 23px;
-  left: 5%;
-  right: 5%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--blue-main), var(--blue-pale));
-  z-index: 0;
-}
-
-.step {
-  flex: 1;
-  min-width: 160px;
-  text-align: center;
-  padding: 0 16px;
-  position: relative;
-  z-index: 1;
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
 }
 
 .step-num {
-  width: 48px;
-  height: 48px;
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  background: var(--blue-main);
   color: var(--white);
   font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
   border: 4px solid var(--bg-white);
-  box-shadow: 0 0 0 2px var(--blue-main);
+  box-shadow: var(--shadow);
+  z-index: 2;
 }
 
-.step h4 {
-  font-family: var(--font-heading);
+.step-visual {
+  height: 120px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.step-caption {
+  flex: 1;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  padding: 22px 18px;
+}
+
+.step-caption p {
+  color: var(--white);
   font-size: 14px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 8px;
+  line-height: 1.55;
 }
 
-.step p {
-  font-size: 13px;
-  color: var(--text-muted);
-  line-height: 1.5;
+.step-caption strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  margin-bottom: 2px;
 }
+
+.step-card--1 .step-num, .step-card--1 .step-visual, .step-card--1 .step-caption { background: var(--blue-dark); }
+.step-card--2 .step-num, .step-card--2 .step-visual, .step-card--2 .step-caption { background: var(--blue-mid); }
+.step-card--3 .step-num, .step-card--3 .step-visual, .step-card--3 .step-caption { background: var(--blue-main); }
+.step-card--4 .step-num, .step-card--4 .step-visual, .step-card--4 .step-caption { background: var(--blue-dark); }
+.step-card--5 .step-num, .step-card--5 .step-visual, .step-card--5 .step-caption { background: var(--blue-mid); }
 
 
 /* ── PORTAFOLIO (SPLIT) ── */

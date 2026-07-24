@@ -16,6 +16,10 @@
   .contact-grid {
     grid-template-columns: 1fr;
   }
+
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 
@@ -65,13 +69,9 @@
   }
 
   /* Steps */
-  .steps::before {
-    display: none;
-  }
-
-  .step {
-    min-width: 140px;
-    padding: 0 8px;
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 16px;
   }
 
   /* Works split – ya es una sola columna en desktop, sin cambios extra en móvil */
@@ -87,6 +87,11 @@
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 14px;
   }
 
   .works-gallery {
